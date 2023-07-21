@@ -28,20 +28,19 @@ for (int i=0; i<AS.Length; i++)
   AS[i] = Console.ReadLine();
 }
 
-// 5. Сортировка методом вставки
-for (int i = 0; i < AS.Length - 1; i++)
-  for (int j = i; j >= 0; j--)
-    if (String.Compare(AS[j], AS[j + 1]) > 0) // функция Compare()
-    {
-      // поменять значения местами
-      s = AS[j];
-      AS[j] = AS[j + 1];
-      AS[j + 1] = s;
-    }
-
-// 6. Вывести массив AS
-Console.WriteLine("Sorted array:");
 Console.WriteLine($"[{string.Join(", ",AS)}]");
 
-Console.ReadKey();
+void newStrings(string[] massive)
+{
+  string[] BS;
+  BS = new string[3];
+  for (int i = 0; i < 3; i++)
+  {
+    int rand = new Random().Next(0, massive.Length);
+    BS[i] = massive[rand];
+  }
+  Console.WriteLine($"[{string.Join(", ",BS)}]");
+}
+
+newStrings(AS);
 
