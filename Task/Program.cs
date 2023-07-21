@@ -33,8 +33,10 @@ Console.WriteLine($"[{string.Join(", ",AS)}]");
 void newStrings(string[] massive)
 {
   string[] BS;
-  BS = new string[3];
-  for (int i = 0; i < 3; i++)
+  int rand_size = new Random().Next(1,4);
+  Console.WriteLine($"Длинна нового массива: {rand_size}");
+  BS = new string[rand_size];
+  for (int i = 0; i < rand_size; i++)
   {
     int rand = new Random().Next(0, massive.Length);
     BS[i] = massive[rand];
